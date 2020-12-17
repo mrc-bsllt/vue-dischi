@@ -25,7 +25,10 @@
 
         <div class="options">
           <label for="options">SELEZIONA UN GENERE</label>
-          <select @change="saluta()" v-model="selectValue" name="options">
+          <select
+            @change="changeTheGenre()"
+            v-model="selectValue"
+            name="options">
             <option></option>
             <option v-for="genre in genres">{{ genre }}</option>
           </select>

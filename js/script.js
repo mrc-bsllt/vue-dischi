@@ -16,7 +16,7 @@ var app = new Vue (
       selectValue: ""
     }, //fine data
     methods: {
-      saluta: function() {
+      changeTheGenre: function() {
 
         this.discs.forEach(
           (element) => {
