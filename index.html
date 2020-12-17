@@ -34,7 +34,10 @@
 
       <main>
         <div id="discs" v-if="discs.lenght != 0">
-          <div v-for="(disc, index) in discs" v-if="discs[index].visible" class="disc">
+          <div
+            v-for="(disc, index) in discs"
+            v-if="discs[index].visible"
+            class="disc">
             <div class="disc_bg">
               <img :src="disc.poster" :alt="disc.author">
               <h2>{{ disc.author }}</h2>

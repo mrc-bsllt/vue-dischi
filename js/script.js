@@ -17,16 +17,21 @@ var app = new Vue (
     }, //fine data
     methods: {
       saluta: function() {
-        console.log(this.selectValue);
+
         this.discs.forEach(
           (element) => {
-            console.log(element.genre);
-            if(element.genre != this.selectValue) {
+
+            element.visible = true;
+
+            if(this.selectValue == "") {
+              element.visible = true;
+            } else if (element.genre != this.selectValue) {
               element.visible = false;
             }
           }
         );
-      }
+
+      } //fine funzione
 
     }, //fine methods
     mounted: function() {
