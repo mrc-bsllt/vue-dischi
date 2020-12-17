@@ -65,9 +65,11 @@ header {
 .options > select {
   width: 500px;
   margin-left: 10px;
+}
+.options > select > option {
   color: #000000;
   font-weight: 700;
-  text-align-last: center;
+  text-transform: uppercase;
 }
 /* /header */
 

@@ -2,7 +2,8 @@ var app = new Vue (
   {
     el: "#wrapper",
     data: {
-      discs: []
+      discs: [],
+      genres: []
     }, //fine data
     methods: {
 
@@ -13,7 +14,13 @@ var app = new Vue (
         .get("https://flynn.boolean.careers/exercises/api/array/music")
         .then(function (result) {
           self.discs = result.data.response;
-          console.log(self.discs);
+          result.data.response.forEach(
+            (element) => {
+              if (!self.genres.includes(element.genre))
+              // console.log(element.genre);
+              self.genres.push(element.genre);
+            }
+          );
         }
         );
     } //fine mounted
