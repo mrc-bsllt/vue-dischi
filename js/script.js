@@ -1,3 +1,12 @@
+// {
+//   "poster": "https://www.onstageweb.com/wp-content/uploads/2018/09/bon-jovi-new-jersey.jpg",
+//   "title": "New Jersey",
+//   "author": "Bon Jovi",
+//   "genre": "Rock",
+//   "year": "1988",
+//   "visible": true
+// },
+
 var app = new Vue (
   {
     el: "#wrapper",
@@ -12,11 +21,20 @@ var app = new Vue (
 
     }, //fine methods
     mounted: function() {
+
       const self = this;
+
       axios
         .get("https://flynn.boolean.careers/exercises/api/array/music")
         .then(function (result) {
           self.discs = result.data.response;
+
+          self.discs.forEach(
+            (element) => {
+              element.visible = true;
+            }
+          );
+
           result.data.response.forEach(
             (element) => {
               if (!self.genres.includes(element.genre))
@@ -24,6 +42,8 @@ var app = new Vue (
               self.genres.push(element.genre);
             }
           );
+          console.log(self.discs);
+
         }
         );
     } //fine mounted
