@@ -33,15 +33,20 @@
 
       <main>
         <div id="discs">
-          <div class="disc">
+          <div v-for="disc in discs" class="disc">
             <div class="disc_bg">
-              <img src="" alt="">
+              <img :src="disc.poster" :alt="disc.author">
+              <h2>{{ disc.author }}</h2>
+              <h3>{{ disc.title }}</h3>
+              <p>{{ disc.year }}</p>
             </div>
           </div>
         </div>
       </main>
 
-      <footer></footer>
+      <footer>
+        <p>Created with &hearts; By Marco Busellato</p>
+      </footer>
     </div>
 
     <script src="js/script.js" charset="utf-8"></script>
