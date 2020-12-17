@@ -18,6 +18,14 @@ var app = new Vue (
     methods: {
       saluta: function() {
         console.log(this.selectValue);
+        this.discs.forEach(
+          (element) => {
+            console.log(element.genre);
+            if(element.genre != this.selectValue) {
+              element.visible = false;
+            }
+          }
+        );
       }
 
     }, //fine methods

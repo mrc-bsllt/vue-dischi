@@ -26,7 +26,7 @@
         <div class="options">
           <label for="options">SELEZIONA UN GENERE</label>
           <select @change="saluta()" v-model="selectValue" name="options">
-            <option value=""></option>
+            <option></option>
             <option v-for="genre in genres">{{ genre }}</option>
           </select>
         </div>
@@ -34,7 +34,7 @@
 
       <main>
         <div id="discs" v-if="discs.lenght != 0">
-          <div v-for="disc in discs" class="disc">
+          <div v-for="(disc, index) in discs" v-if="discs[index].visible" class="disc">
             <div class="disc_bg">
               <img :src="disc.poster" :alt="disc.author">
               <h2>{{ disc.author }}</h2>
