@@ -25,14 +25,19 @@
 
         <div class="options">
           <label for="options">SELEZIONA UN GENERE</label>
-          <select class="" name="options">
-            <option v-for="genre in genres" value="genre">{{ genre }}</option>
+          <select @change="saluta()" class="" name="options">
+            <option value=""></option>
+            <option
+              v-for="genre in genres"
+              value="genre">
+              {{ genre }}
+            </option>
           </select>
         </div>
       </header>
 
       <main>
-        <div id="discs">
+        <div id="discs" v-if="discs.lenght != 0">
           <div v-for="disc in discs" class="disc">
             <div class="disc_bg">
               <img :src="disc.poster" :alt="disc.author">

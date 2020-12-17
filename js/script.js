@@ -6,6 +6,9 @@ var app = new Vue (
       genres: []
     }, //fine data
     methods: {
+      saluta: function() {
+        console.log("ciao");
+      }
 
     }, //fine methods
     mounted: function() {
