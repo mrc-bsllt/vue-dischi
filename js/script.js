@@ -42,8 +42,11 @@ var app = new Vue (
         .get("https://flynn.boolean.careers/exercises/api/array/music")
         .then(function (result) {
           self.discs = result.data.response;
-          
-          self.discs.sort(function(a, b){return a.year - b.year});
+
+          self.discs.sort( (a, b) => {
+              return a.year - b.year
+            }
+          );
 
           self.discs.forEach(
             (element) => {
