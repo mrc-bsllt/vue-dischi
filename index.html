@@ -2,6 +2,8 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,300&display=swap" rel="stylesheet">
@@ -14,6 +16,34 @@
     <title>Vue dischi</title>
   </head>
   <body>
+
+    <div id="wrapper">
+      <header>
+        <div class="logo">
+          <a href="#"><i class="fab fa-spotify"></i></a>
+        </div>
+
+        <div class="options">
+          <label for="options">SELEZIONA UN GENERE</label>
+          <select class="" name="options">
+            <option value="PROVA">PROVA</option>
+          </select>
+        </div>
+      </header>
+
+      <main>
+        <div id="discs">
+          <div class="disc">
+            <div class="disc_bg">
+              <img src="" alt="">
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer></footer>
+    </div>
+
     <script src="js/script.js" charset="utf-8"></script>
   </body>
 </html>

@@ -3,4 +3,89 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Lato', sans-serif;
+  color: #ffffff;
 }
+
+/* generale */
+#wrapper {
+  width: 100%;
+  height: 100vh;
+}
+.disc {
+  width: calc(100% / 5);
+  height: 300px;
+  padding: 10px;}
+.disc_bg {
+  height: 100%;
+  padding: 5px;
+  background-color: rgba(40, 51, 49, 0.7);
+}
+/* /generale */
+
+/* header */
+header {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90px;
+  padding-right: 30px;
+  background-color: #000000;
+}
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5%;
+  height: 100%;
+}
+.logo > a {
+  font-size: 50px;
+}
+.logo > a > i {
+  color: #1ed760;
+}
+.options {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 95%;
+  height: 100%;
+}
+.options > select {
+  width: 500px;
+  margin-left: 10px;
+  color: #000000;
+  font-weight: 700;
+  text-align-last: center;
+}
+/* /header */
+
+/* main */
+main {
+  height: calc(100vh - 140px);
+  margin-top: 90px;
+  background-color: #444444;
+  overflow-y: auto;
+}
+#discs {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 70%;
+  padding: 20px;
+  margin: auto;
+}
+/* /main */
+
+/* footer */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-color: #000000;
+}
+/* /footer */
