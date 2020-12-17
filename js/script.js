@@ -12,11 +12,12 @@ var app = new Vue (
     el: "#wrapper",
     data: {
       discs: [],
-      genres: []
+      genres: [],
+      selectValue: ""
     }, //fine data
     methods: {
       saluta: function() {
-        console.log("ciao");
+        console.log(this.selectValue);
       }
 
     }, //fine methods
