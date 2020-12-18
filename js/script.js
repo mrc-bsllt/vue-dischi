@@ -41,28 +41,28 @@ var app = new Vue (
       axios
         .get("https://flynn.boolean.careers/exercises/api/array/music")
         .then(function (result) {
-          self.discs = result.data.response;
+            self.discs = result.data.response;
 
-          self.discs.sort( (a, b) => {
-              return a.year - b.year
-            }
-          );
+            self.discs.sort( (a, b) => {
+                return a.year - b.year
+              }
+            );
 
-          self.discs.forEach(
-            (element) => {
-              element.visible = true;
-            }
-          );
+            self.discs.forEach(
+              (element) => {
+                element.visible = true;
+              }
+            );
 
-          result.data.response.forEach(
-            (element) => {
-              if (!self.genres.includes(element.genre))
-              self.genres.push(element.genre);
-            }
-          );
-          console.log(self.discs);
+            result.data.response.forEach(
+              (element) => {
+                if (!self.genres.includes(element.genre))
+                self.genres.push(element.genre);
+              }
+            );
+            console.log(self.discs);
 
-        }
+          }
         );
     }, //fine mounted
 
