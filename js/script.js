@@ -60,7 +60,6 @@ var app = new Vue (
                 self.genres.push(element.genre);
               }
             );
-            console.log(self.discs);
 
           }
         );
